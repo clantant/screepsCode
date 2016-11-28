@@ -40,13 +40,13 @@ module.exports.loop = function () {
     //console.log('Upgraders: ' + upgraders.length);
    
     if(harvesters.length < 3) {
-       Game.spawns.Spawn1.createCreep([WORK, WORK, WORK, CARRY, CARRY, MOVE], null, {role: 'harvester'});
-    } else if(builders.length < 3) {
-       Game.spawns.Spawn1.createCreep([WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE], null, {role: 'builder'});
-    } else if(upgraders.length < 6) {
-       Game.spawns.Spawn1.createCreep([WORK, WORK, CARRY, CARRY, MOVE, MOVE, MOVE], null, {role: 'upgrader'});
+       Game.spawns.Spawn1.createCreep([WORK, WORK, WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE], null, {role: 'harvester'});
+    } else if(builders.length < 1) {
+       Game.spawns.Spawn1.createCreep([WORK, WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE], null, {role: 'builder'});
+    } else if(upgraders.length < 4) {
+       Game.spawns.Spawn1.createCreep([WORK, WORK, CARRY, CARRY, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE, MOVE, MOVE, MOVE], null, {role: 'upgrader'});
     } else if(repairers.length < 1) {
-        Game.spawns.Spawn1.createCreep([WORK, WORK, CARRY, CARRY, MOVE, MOVE, MOVE], null, {role: 'repairer'});
+        Game.spawns.Spawn1.createCreep([WORK, WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE, MOVE], null, {role: 'repairer'});
     }
     
     //console.log('Upgraders: ' + upgraders.length + ' Builders: ' + builders.length + ' Harvesters: ' + harvesters.length + ' Repairers: ' + repairers.length);
